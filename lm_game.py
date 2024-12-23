@@ -13,19 +13,57 @@ TOKEN_SPAWN_INTERVAL = 60
 
 # Utility functions
 def create_corpus():
-    sentences = [
-        """The cat sat on the bed.
-        I read a book last week.
-        He ran fast in the park.
-        She made a cake for me.
-        The dog barked all day.
-        We sang songs by the fire.
-        They went to play in the sun.
-        She saw a bird on the tree.
-        He likes fish and soup.
-        I swam in the cool lake."""
-    ]
-    return " ".join(sentences).lower().replace(".", "")
+    sentences =  """The cat sat on the bed.
+I read a book last week.
+He ran fast in the park.
+She made a cake for me.
+The dog barked all day.
+We sang songs by the fire.
+They went to play in the sun.
+She saw a bird on the tree.
+He likes fish and soup.
+I swam in the cool lake.
+The kids made a sand fort.
+He gave me a gift box.
+They love to hike and run.
+The bus was late last time.
+I like rice and hot tea.
+The frog sat on a rock.
+She put jam on her roll.
+The moon is big and bright.
+I lost my hat in the wind.
+He made a plan to go out.
+The sun was warm and bright.
+We ran to the top of the hill.
+He lost his hat in the park.
+She gave me a hug last night.
+The fish swam fast in the pond.
+I sat on the deck with my dog.
+They sang a song by the fire.
+The book is on the desk now.
+He ate the last of the cake.
+She made tea for her mom.
+I like to play games with him.
+The car was red and very fast.
+She held a big box for me.
+He told me a joke last time.
+They went to the mall to shop.
+The bird flew up to the tree.
+I gave her a doll for her toy.
+The kids are out in the yard.
+He put the book in the bag.
+She sat in the sun with a hat.
+We saw a fox run in the woods.
+The boat sank fast in the lake.
+She took a nap on the couch.
+He likes to fish in the pond.
+The dog dug a hole in the yard.
+I made soup with rice and meat.
+We ate the last bit of the pie.
+She put jam on her slice of bread.
+The stars are out in the sky now.
+He said yes to my new plan."""
+    return " ".join(sentences.lower().replace(".", "").split("\n"))
 
 CORPUS = create_corpus()
 HEAD_WORDS = [sentence.split()[0] for sentence in CORPUS.split("\n")]
